@@ -1,11 +1,13 @@
 import React from 'react'
 import { AuroraBackground } from "./ui/aurora-background";
+import { motion } from 'framer-motion';
 
 
 const HeroSection = () => {
+    console.log(motion.div)
   return (
     <AuroraBackground>
-        
+
         <div className="text-3xl md:text-7xl font-bold text-white text-center">
           Background lights are cool you know.
         </div>
