@@ -2,6 +2,8 @@
 import React from "react";
 import { WavyBackground  } from "./ui/wavy-background";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
+import { TextGenerateEffect } from "./ui/text-generate-effect";
+
 
 
 export function WavyBackgroundDemo() {
@@ -50,8 +52,11 @@ export function WavyBackgroundDemo() {
         },
       ];
 
+const words = `Oxygen gets you high. In a catastrophic emergency, we're taking giant, panicked breaths. Suddenly you become euphoric, docile. You accept your fate. It's all right here. Emergency water landing, six hundred miles an hour. Blank faces, calm as Hindu cows
+`;
+
   return (
-    (<WavyBackground className="max-w-4xl mx-auto pb-40 pt-20 " speed="fast" number={40} >
+    (<WavyBackground className="max-w-4xl mx-auto pb-40 pt-40 " speed="fast" number={40} >
       <p
         className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
         Hero waves are cool
@@ -63,6 +68,8 @@ export function WavyBackgroundDemo() {
       <div className="flex flex-row items-center justify-center mb-10 pt-10 w-full">
       <AnimatedTooltip items={people} />
     </div>
+    <TextGenerateEffect words={words} />;
+
 
     </WavyBackground>)
   );
