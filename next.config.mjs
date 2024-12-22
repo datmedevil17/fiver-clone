@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-      domains: ["imgs.search.brave.com"], // Add your allowed image domains here
+      domains: ["imgs.search.brave.com", "images.unsplash.com"],
+      // Add your allowed image domains here
     },
   };
 
