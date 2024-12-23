@@ -4,6 +4,16 @@ import { FaXTwitter } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 import { BackgroundBeams } from "../components/ui/background-beam";
 import LogoSlider from "./LogoSlider";
+import { FloatingDock } from "./ui/floating-dock";
+import {
+  IconBrandGithub,
+  IconBrandX,
+  IconExchange,
+  IconHome,
+  IconNewSection,
+  IconTerminal2,
+} from "@tabler/icons-react";
+
 
 function Footer() {
   const offices = [
@@ -37,6 +47,52 @@ function Footer() {
       email: 'info@infoqainc.com'
     }
   ];
+  const links = [
+    {
+      title: "Home",
+      icon: (
+        <IconHome className="h-full w-full text-neutral-300" />
+      ),
+      href: "#",
+    },
+
+    {
+      title: "Products",
+      icon: (
+        <IconTerminal2 className="h-full w-full text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Components",
+      icon: (
+        <IconNewSection className="h-full w-full text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Changelog",
+      icon: (
+        <IconExchange className="h-full w-full text-neutral-300" />
+      ),
+      href: "#",
+    },
+
+    {
+      title: "Twitter",
+      icon: (
+        <IconBrandX className="h-full w-full text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "GitHub",
+      icon: (
+        <IconBrandGithub className="h-full w-full text-neutral-300" />
+      ),
+      href: "#",
+    },
+]
 
   return (
     <div>
@@ -52,23 +108,9 @@ function Footer() {
                 <p className="text-white font-bold text-3xl pb-6">
                   Company <span className="text-blue-600">Name</span>
                 </p>
-                <div className="flex gap-6 pb-5">
-                  <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin className="text-white text-2xl cursor-pointer hover:text-blue-600" />
-                  </a>
-                  <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <FaFacebook className="text-white text-2xl cursor-pointer hover:text-blue-600" />
-                  </a>
-                  <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                    <FaYoutube className="text-white text-2xl cursor-pointer hover:text-red-600" />
-                  </a>
-                  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                    <FaXTwitter className="text-white text-2xl cursor-pointer hover:text-gray-800" />
-                  </a>
-                  <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                    <FaInstagram className="text-white text-2xl cursor-pointer hover:text-orange-400" />
-                  </a>
-                </div>
+                <FloatingDock
+                mobileClassName="translate-y-20"
+                items={links}/>
               </ul>
             </div>
 

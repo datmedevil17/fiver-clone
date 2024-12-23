@@ -65,9 +65,9 @@ const words = `Oxygen gets you high. In a catastrophic emergency, we're taking g
         className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
         Leverage the power of canvas to create a beautiful hero section
       </p>
-      <div className="flex flex-row items-center justify-center mb-10 pt-10 w-full">
+      {/* <div className="flex flex-row items-center justify-center mb-10 pt-10 w-full">
       <AnimatedTooltip items={people} />
-    </div>
+    </div> */}
     <TextGenerateEffect words={words} />;
 
 

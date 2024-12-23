@@ -225,13 +225,15 @@ export default function Home() {
     >
         <Navbar className="top-2"/>
 
-        {/* <WavyBackgroundDemo className="p-10"/> */}
+        <WavyBackgroundDemo className="p-10"/>
         <HeroSection/>
         {/* <GridBackgroundDemo/> */}
         {/* <BackgroundBoxesDemo/> */}
         
         <HeroScrollDemo/>
         <StickyScrollRevealDemo/>
+        <HoverEffect items={projects}/>
+        <VortexDemo/>
         {/* <ExpandableCardDemo/> */}
         {/* <GoogleGeminiEffect/> */}
         {/* <HeroHighlightDemo/> */}
@@ -240,13 +242,12 @@ export default function Home() {
       <Timeline data={data} />
     </div> */}
     
-    {/* <main>
+     {/* <main>
       <Spline
         scene="https://prod.spline.design/RyFUeqpTcG5Kt9qB/scene.splinecode"
       />
-    </main>
-    <StickyScrollRevealDemo/>
-    <WorldMapDemo/>
+    </main> */}
+    {/* <WorldMapDemo/> */}
     <Footer />
     </div>
   );
