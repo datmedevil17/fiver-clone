@@ -225,7 +225,7 @@ export default function Home() {
     >
         <Navbar className="top-2"/>
 
-        <WavyBackgroundDemo className="p-10"/>
+        {/* <WavyBackgroundDemo className="p-10"/> */}
         <HeroSection/>
         {/* <GridBackgroundDemo/> */}
         {/* <BackgroundBoxesDemo/> */}
