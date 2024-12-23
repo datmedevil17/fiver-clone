@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { WavyBackgroundDemo } from "@/components/WavyBackground";
 import { WorldMapDemo } from "@/components/WorldMapDemo";
-import  HeroSection  from "@/components/HeroSection";
-import Hello from "@/components/Hello";
+import HeroSection from "@/components/HeroSection";
 import { GridBackgroundDemo } from "@/components/GridBackgroundDemo";
 import { BackgroundBoxesDemo } from "@/components/BackgroundBoxes";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
@@ -15,6 +14,7 @@ import { SVGMaskEffectDemo } from "@/components/SVGMaskEffectDemo";
 import { Timeline } from "@/components/ui/timeline";
 import { VortexDemo } from "@/components/VortexDemo";
 import Spline from '@splinetool/react-spline/next';
+import { Navbar } from "@/components/Navbar";
 
 
 export default function Home() {
@@ -219,8 +219,9 @@ export default function Home() {
       className="min-h-screen"
       style={{ backgroundColor: "#0f0f0f" }} // Lighter shade of black
     >
+        <Navbar className="top-2"/>
         <WavyBackgroundDemo className="p-10"/>
-        {/* <HeroSection/> */}
+        <HeroSection/>
         <GridBackgroundDemo/>
         <BackgroundBoxesDemo/>
         <HoverEffect items={projects}/>

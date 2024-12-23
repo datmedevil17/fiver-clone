@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { HeroHighlight, Highlight } from "./ui/hero-highlight";
 
 export function HeroHighlightDemo() {
+    console.log(motion.div)
   return (
     (<HeroHighlight>
       <motion.h1
