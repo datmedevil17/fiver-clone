@@ -16,6 +16,7 @@ import { Timeline } from "@/components/ui/timeline";
 import { VortexDemo } from "@/components/VortexDemo";
 import Spline from '@splinetool/react-spline/next';
 import { Navbar } from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { StickyScrollRevealDemo } from "@/components/StickyScrollRevealDemo";
 
 
@@ -243,6 +244,7 @@ export default function Home() {
     </main>
     <StickyScrollRevealDemo/>
     <WorldMapDemo/>
+    <Footer />
     </div>
   );
 }
