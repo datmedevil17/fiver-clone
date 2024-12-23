@@ -17,10 +17,12 @@ const HeroSection = () => {
         </div>
 
         {/* 3D Model */}
-        <div className="lg:w-1/2 flex justify-center lg:justify-end ">
+        <div className="lg:w-1/2 flex justify-center lg:justify-end mt-[-4] ">
           <div className="w-full h-full md:h-[400px] lg:h-[500px] xl:h-[900px]">
             <Spline
-              scene="https://prod.spline.design/JtEHUpaKjRqqmOS8/scene.splinecode"
+              scene="
+                      https://prod.spline.design/8fcFSxa15zPBmmEZ/scene.splinecode
+                    "
               className="w-full h-full"
             />
           </div>

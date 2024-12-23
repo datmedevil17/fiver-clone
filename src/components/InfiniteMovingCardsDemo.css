@@ -1,0 +1,50 @@
+.infinite-cards-container {
+    width: 100%;
+    overflow: hidden;
+    background: #1b1f3b; /* Background matching your style */
+    padding: 20px 0;
+    position: relative;
+  }
+
+  .cards-track {
+    display: flex;
+    gap: 20px; /* Spacing between cards */
+    animation: scroll 20s linear infinite;
+    white-space: nowrap; /* Prevent line breaks */
+  }
+
+  .card {
+    min-width: 300px; /* Card width */
+    background: linear-gradient(to right, #ffffff, #1b1f3b);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    flex-shrink: 0; /* Prevent shrinking */
+  }
+
+  .card-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .card-author {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+  }
+
+  .card-source {
+    color: #aaaaaa;
+    font-size: 14px;
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }

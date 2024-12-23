@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { WavyBackgroundDemo } from "@/components/WavyBackground";
+import Robot from "@/components/Robot";
 import { WorldMapDemo } from "@/components/WorldMapDemo";
 import HeroSection from "@/components/HeroSection";
 import { GridBackgroundDemo } from "@/components/GridBackgroundDemo";
@@ -220,6 +221,7 @@ export default function Home() {
       style={{ backgroundColor: "#0f0f0f" }} // Lighter shade of black
     >
         <Navbar className="top-2"/>
+
         <WavyBackgroundDemo className="p-10"/>
         <HeroSection/>
         <GridBackgroundDemo/>
