@@ -190,14 +190,15 @@ const VerticalTimeline = () => {
           </div>
         </div>
         <Robot/>
-        <InfiniteMovingCardsDemo/>
-        <StickyScrollRevealDemo/>
 
 
 
         {/* Repeat similar blocks for other sections */}
 
       </div>
+      <InfiniteMovingCardsDemo/>
+
+
 
     </section>
   );

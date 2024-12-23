@@ -3,43 +3,46 @@ import './InfiniteMovingCardsDemo.css';
 
 const cards = [
   {
-    text: `It was the best of times, it was the worst of times,
-           it was the age of wisdom, it was the age of foolishness,
-           it was the epoch of belief, it was the epoch of incredulity,
-           it was the season of Light, it was the season of Darkness,
-           it was the spring of hope, it was the winter of despair.`,
-    author: 'Charles Dickens',
-    source: 'A Tale of Two Cities',
+    text: 'The journey of a thousand miles begins with a single step.',
+    author: 'Lao Tzu',
+    source: 'Ancient Philosophy',
   },
   {
-    text: `To be, or not to be, that is the question: Whether 'tis nobler in the mind
-           to suffer The slings and arrows of outrageous fortune, Or to take Arms
-           against a Sea of troubles, And by opposing end them: to die, to sleep.`,
-    author: 'William Shakespeare',
-    source: 'Hamlet',
+    text: 'In the middle of difficulty lies opportunity.',
+    author: 'Albert Einstein',
+    source: 'Physics and Beyond',
   },
   {
-    text: `All that we see or seem is but a dream within a dream.`,
-    author: 'Edgar Allan Poe',
-    source: 'A Dream Within a Dream',
+    text: 'Success is not final, failure is not fatal: It is the courage to continue that counts.',
+    author: 'Winston Churchill',
+    source: 'Leadership Insights',
+  },
+  {
+    text: 'Happiness is not something ready-made. It comes from your own actions.',
+    author: 'Dalai Lama',
+    source: 'Buddhist Teachings',
+  },
+  {
+    text: 'Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.',
+    author: 'Buddha',
+    source: 'Meditative Reflections',
   },
 ];
 
-const InfiniteMovingCardsDemo = () => {
+const InfiniteMovingCards = () => {
   return (
     <div className="infinite-cards-container">
       <div className="cards-track">
-  {[...cards, ...cards].map((card, index) => (
-    <div className="card" key={index}>
-      <p className="card-text">{card.text}</p>
-      <span className="card-author">{card.author}</span>
-      <small className="card-source">{card.source}</small>
-    </div>
-  ))}
-</div>
-
+        {[...cards, ...cards].map((card, index) => (
+          <div className="card" key={index}>
+            <p className="card-text">{card.text}</p>
+            <span className="card-author">{card.author}</span>
+            <small className="card-source">{card.source}</small>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default InfiniteMovingCardsDemo;
+export default InfiniteMovingCards;

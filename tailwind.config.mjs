@@ -28,6 +28,20 @@ export default {
               },
             },
           },
+          keyframes: {
+            marquee: {
+                '0%': {
+                    transform: 'translateX(0)'
+                },
+                '100%': {
+                    transform: 'translateX(-100%)'
+                },
+            },
+        },
+        // Add custom animations
+        animation: {
+            'marquee': 'marquee 20s linear infinite',
+        },
         animation: {
             aurora: "aurora 60s linear infinite",
         },
