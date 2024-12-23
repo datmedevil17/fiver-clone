@@ -1,9 +1,14 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline/next';
+import { Spotlight } from "./ui/spotlight";
 
 const HeroSection = () => {
   return (
-    <div className="h-[80vh] w-full flex items-center justify-center bg-[#0a0e14] relative overflow-hidden z-10">
+    <div className="h-[80vh] w-full flex items-center justify-center bg-black relative overflow-hidden z-10">
+      <Spotlight
+              className="-top-40 left-0 md:left-60 md:-top-20"
+              fill="white"
+            />
       <div className="max-w-7xl lg:h-2xl mx-auto flex flex-col lg:flex-row items-center justify-between w-full px-6 sm:px-8 lg:px-16 pt-5 md:pt-0 space-y-8 lg:space-y-0">
         {/* Text Content */}
         <div className="lg:w-1/2 flex flex-col items-start text-left">

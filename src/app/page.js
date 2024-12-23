@@ -17,6 +17,7 @@ import { VortexDemo } from "@/components/VortexDemo";
 import Spline from '@splinetool/react-spline/next';
 import { Navbar } from "@/components/Navbar";
 import { StickyScrollRevealDemo } from "@/components/StickyScrollRevealDemo";
+import { black } from "tailwindcss/colors";
 
 
 export default function Home() {
@@ -219,30 +220,34 @@ export default function Home() {
 
     <div
       className="min-h-screen"
-      style={{ backgroundColor: "#0f0f0f" }} // Lighter shade of black
+      style={{ backgroundColor: black }} // Lighter shade of black
     >
         <Navbar className="top-2"/>
 
-        <WavyBackgroundDemo className="p-10"/>
+        {/* <WavyBackgroundDemo className="p-10"/> */}
         <HeroSection/>
-        <GridBackgroundDemo/>
-        <BackgroundBoxesDemo/>
-        <HoverEffect items={projects}/>
+        {/* <GridBackgroundDemo/> */}
+        {/* <BackgroundBoxesDemo/> */}
+        
         <HeroScrollDemo/>
-        <ExpandableCardDemo/>
+        <StickyScrollRevealDemo/>
+        {/* <ExpandableCardDemo/> */}
         {/* <GoogleGeminiEffect/> */}
-        <HeroHighlightDemo/>
-        <MacbookScroll/>
-        <div className="w-full">
+        {/* <HeroHighlightDemo/> */}
+        {/* <MacbookScroll/> */}
+        {/* <div className="w-full">
       <Timeline data={data} />
-    </div>
-    <VortexDemo/><main>
+    </div> */}
+    
+    {/* <main>
       <Spline
         scene="https://prod.spline.design/RyFUeqpTcG5Kt9qB/scene.splinecode"
       />
-    </main>
-    <StickyScrollRevealDemo/>
-    <WorldMapDemo/>
+    </main> */}
+    
+    <HoverEffect items={projects}/>
+    <VortexDemo/>
+    {/* <WorldMapDemo/> */}
     </div>
   );
 }
