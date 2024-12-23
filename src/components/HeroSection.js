@@ -18,7 +18,7 @@ const HeroSection = () => {
 
         {/* 3D Model */}
         <div className="lg:w-1/2 flex justify-center lg:justify-end ">
-          <div className="w-full h-full md:h-[400px] lg:h-[500px] xl:h-[600px]">
+          <div className="w-full h-full md:h-[400px] lg:h-[500px] xl:h-[900px]">
             <Spline
               scene="https://prod.spline.design/JtEHUpaKjRqqmOS8/scene.splinecode"
               className="w-full h-full"
