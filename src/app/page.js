@@ -16,6 +16,7 @@ import { Timeline } from "@/components/ui/timeline";
 import { VortexDemo } from "@/components/VortexDemo";
 import Spline from '@splinetool/react-spline/next';
 import { Navbar } from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { StickyScrollRevealDemo } from "@/components/StickyScrollRevealDemo";
 import { black } from "tailwindcss/colors";
 
@@ -243,11 +244,10 @@ export default function Home() {
       <Spline
         scene="https://prod.spline.design/RyFUeqpTcG5Kt9qB/scene.splinecode"
       />
-    </main> */}
-    
-    <HoverEffect items={projects}/>
-    <VortexDemo/>
-    {/* <WorldMapDemo/> */}
+    </main>
+    <StickyScrollRevealDemo/>
+    <WorldMapDemo/>
+    <Footer />
     </div>
   );
 }
