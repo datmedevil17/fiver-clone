@@ -51,7 +51,7 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto flex relative space-x-20 rounded-md overflow:hidden"
+      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-20 rounded-md overflow:hidden"
       ref={ref}>
       <div className="div relative flex items-start px-5">
         <div className="max-w-2xl">
