@@ -15,6 +15,8 @@ import {
 } from "@tabler/icons-react";
 import AnimatedLogoCloud from "./AnimatedLogoCloud";
 import { VortexDemo } from "./VortexDemo";
+import IconCloud from "./IconCloud";
+
 
 
 
@@ -97,6 +99,9 @@ function Footer() {
     },
 ]
 
+const iconSlugs = ['react', 'typescript', 'nextdotjs', 'javascript' , 'html5' , 'css3' , 'nodedotjs' , 'express' , 'nextdotjs' , 'postgresql' , 'docker' , 'git' , 'github' , 'python' , 'mongodb'] 
+
+
   return (
     <div>
       {/* <LogoSlider /> */}
@@ -177,6 +182,10 @@ function Footer() {
                 </li>
               </ul>
             </div>
+
+            <div className="p-10">
+            <IconCloud iconSlugs={iconSlugs}/>
+            </div>
           </div>
 
           {/* Divider */}
@@ -186,8 +195,8 @@ function Footer() {
 
           {/* Addresses Section - Updated to single line */}
           <div className="p-5 text-gray-300">
-            <div className="max-w-full mx-auto px-4">
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="container mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
                 {offices.map((office, index) => (
                   <div key={index} className="p-4 text-sm">
                     <h3 className="font-bold text-white mb-2 text-lg">{office.title}</h3>
