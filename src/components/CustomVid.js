@@ -28,9 +28,13 @@ export function CustomVid() {
 
       <div className="absolute inset-0 bg-black/50"></div> 
 
-      <div className="absolute text-white inset-0 flex flex-col justify-center items-center">
-        <h1 className="text-4xl font-bold">Welcome to Our World</h1>
-        <p className="mt-4 text-lg">Discover amazing things here.</p>
+      <div className="absolute text-white inset-0 flex flex-col justify-center items-start px-10 w-1/2">
+        <h1 className="text-4xl font-bold">CyberSecurity</h1>
+        <p className="mt-4 text-lg">Elixir provides comprehensive cybersecurity services to safeguard your business in today's increasingly digital landscape. 
+            Our team of experts delivers a wide range of solutions, including advanced threat detection and response, vulnerability assessments, penetration testing, 
+            and the implementation of robust security controls. By leveraging cutting-edge technologies and adhering to industry best practices, we proactively identify 
+            and mitigate potential risks, ensuring your data, systems, and reputation remain protected. With Elixir, you can experience peace of mind knowing your digital
+             assets are in capable hands and your business is well-equipped to withstand evolving cyber threats.</p>
       </div>
     </section>
   );
