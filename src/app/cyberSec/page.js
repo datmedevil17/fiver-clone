@@ -3,6 +3,7 @@ import CustomVid from '@/components/CustomVid'
 import { CardDemo } from '@/components/CyberSecCards'
 import Footer from '@/components/Footer'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
+import { ThreeDCardDemo } from '@/components/3DCardEffect'
 
 const projects = [
   {
@@ -62,8 +63,7 @@ const page = () => {
               and the implementation of robust security controls. By leveraging cutting-edge technologies and adhering to industry best practices, we proactively identify 
               and mitigate potential risks, ensuring your data, systems, and reputation remain protected. With Elixir, you can experience peace of mind knowing your digital
               assets are in capable hands and your business is well-equipped to withstand evolving cyber threats."/>
-        <HoverEffect items={projects}/>
-        <CardDemo/>
+        <ThreeDCardDemo/>
         <Footer/>
 
     </div>
