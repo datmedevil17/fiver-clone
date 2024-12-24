@@ -2,7 +2,7 @@
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image'; 
 
-export function CustomVid() {
+export function CustomVid({videoSrc, heading, content}) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export function CustomVid() {
   }, []);
 
   return (
-    <section className="relative h-[70vh] bg-black"> 
+    <section className="relative h-[50vh] bg-black"> 
       <video 
         ref={videoRef} 
         autoPlay 
@@ -23,18 +23,17 @@ export function CustomVid() {
         loop 
         className="absolute inset-0 w-full h-full object-cover" 
       >
-        <source src="https://videos.pexels.com/video-files/5223113/5223113-hd_2560_1440_30fps.mp4"  type="video/mp4" />
+        {/* <source src="https://videos.pexels.com/video-files/5223113/5223113-hd_2560_1440_30fps.mp4"  type="video/mp4" /> */}
+        <source src={videoSrc} type = "video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-black/50"></div> 
+      <div className="absolute inset-0 bg-black/50">
 
-      <div className="absolute text-white inset-0 flex flex-col justify-center items-start px-10 w-1/2">
-        <h1 className="text-4xl font-bold">CyberSecurity</h1>
-        <p className="mt-4 text-lg">Elixir provides comprehensive cybersecurity services to safeguard your business in today's increasingly digital landscape. 
-            Our team of experts delivers a wide range of solutions, including advanced threat detection and response, vulnerability assessments, penetration testing, 
-            and the implementation of robust security controls. By leveraging cutting-edge technologies and adhering to industry best practices, we proactively identify 
-            and mitigate potential risks, ensuring your data, systems, and reputation remain protected. With Elixir, you can experience peace of mind knowing your digital
-             assets are in capable hands and your business is well-equipped to withstand evolving cyber threats.</p>
+      <div className="absolute text-white inset-0 flex flex-col justify-center items-start px-10 max-w-screen-xl">
+        <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">{heading}</h1>
+        <p className="mt-4 text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-300 leading-relaxed">{content}</p>   
+      </div>
+          
       </div>
     </section>
   );
