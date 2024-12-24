@@ -1,0 +1,17 @@
+@keyframes logo-cloud {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-logo-cloud {
+    animation: logo-cloud 30s linear infinite;
+  }
+  
+  /* Optional: Pause on hover */
+  .group:hover .animate-logo-cloud {
+    animation-play-state: paused;
+  }

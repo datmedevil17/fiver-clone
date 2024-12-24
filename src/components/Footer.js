@@ -3,7 +3,7 @@ import { FaLinkedin, FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 import { BackgroundBeams } from "../components/ui/background-beam";
-import LogoSlider from "./LogoSlider";
+// import LogoSlider from "./LogoSlider";
 import { FloatingDock } from "./ui/floating-dock";
 import {
   IconBrandGithub,
@@ -13,6 +13,9 @@ import {
   IconNewSection,
   IconTerminal2,
 } from "@tabler/icons-react";
+import AnimatedLogoCloud from "./AnimatedLogoCloud";
+import { VortexDemo } from "./VortexDemo";
+
 
 
 function Footer() {
@@ -96,7 +99,9 @@ function Footer() {
 
   return (
     <div>
-      <LogoSlider />
+      {/* <LogoSlider /> */}
+      <VortexDemo/>
+      <AnimatedLogoCloud />
       <div className="w-full rounded-md bg-black relative flex md:flex-row flex-col items-center justify-center antialiased">
         <BackgroundBeams />
         <footer className="bg-black w-full">

@@ -233,8 +233,8 @@ export default function Home() {
         
         <HeroScrollDemo/>
         <StickyScrollRevealDemo/>
-        <HoverEffect items={projects}/>
-        <VortexDemo/>
+        {/* <HoverEffect items={projects}/> */}
+        
         {/* <ExpandableCardDemo/> */}
         {/* <GoogleGeminiEffect/> */}
         {/* <HeroHighlightDemo/> */}
@@ -250,6 +250,7 @@ export default function Home() {
     </main> */}
     {/* <WorldMapDemo/> */}
     <AppleCardsCarouselDemo/>
+    {/* <VortexDemo/> */}
     <Footer />
     </div>
   );
