@@ -19,6 +19,7 @@ import { Navbar } from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { StickyScrollRevealDemo } from "@/components/StickyScrollRevealDemo";
 import { black } from "tailwindcss/colors";
+import { AppleCardsCarouselDemo } from "@/components/AppleCardsCarousel";
 
 
 export default function Home() {
@@ -248,6 +249,7 @@ export default function Home() {
       />
     </main> */}
     {/* <WorldMapDemo/> */}
+    <AppleCardsCarouselDemo/>
     <Footer />
     </div>
   );
