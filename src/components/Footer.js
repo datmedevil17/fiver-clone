@@ -99,7 +99,7 @@ function Footer() {
     },
 ]
 
-const iconSlugs = ['react', 'typescript', 'nextdotjs', 'javascript' , 'html5' , 'css3' , 'nodedotjs' , 'express' , 'nextdotjs' , 'postgresql' , 'docker' , 'git' , 'github' , 'python' , 'mongodb'] 
+const iconSlugs = ['typescript', 'javascript', 'react', 'html5' , 'css3' , 'nodedotjs' , 'express' , 'nextdotjs' , 'postgresql' , 'vercel' , 'docker' , 'git' , 'github' , 'visualstudiocode' , 'C' , 'python' , 'tailwindcss' , 'mongodb' , 'mysql' , 'Solidity' , 'Hardhat' , 'Wagmi' , 'Foundry' , 'Rust' , 'Move' , 'Aptos' , 'framermotion' , 'shadcn-ui'] 
 
 
   return (
