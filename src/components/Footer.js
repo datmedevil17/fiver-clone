@@ -308,7 +308,25 @@ return (
                   <a href="">Our Technology Partners</a>
                 </li>
               </ul>
+              <br></br>
+              <br></br>
+              <ul>
+                <p className="text-white font-bold text-2xl pb-4">Blogs</p>
+                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+                  <a href="">About Company</a>
+                </li>
+                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 hover:underline transition-colors duration-200 cursor-pointer">
+                  <a href="">Vision & Mission</a>
+                </li>
+                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+                  <a href="">Become our Partner</a>
+                </li>
+                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+                  <a href="">Our Technology Partners</a>
+                </li>
+              </ul>
             </div>
+            
 
           <div className="relative flex size-full max-w-xl items-center justify-center overflow-hidden rounded-lg px-8 min-w-64 sm:pb-0 pb-4">
             <IconCloud iconSlugs={iconSlugs}/>
