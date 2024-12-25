@@ -16,6 +16,7 @@ import {
 import AnimatedLogoCloud from "./AnimatedLogoCloud";
 import { VortexDemo } from "./VortexDemo";
 import IconCloud from "./IconCloud";
+import FooterDock from "./FooterDock";
 
 
 
@@ -116,9 +117,12 @@ return (
               <p className="text-white font-bold text-3xl pb-6">
                 Company <span className="text-blue-600">Name</span>
               </p>
-              <FloatingDock
+              {/* <FloatingDock
               mobileClassName="translate-y-20"
-              items={links}/>
+              items={links}/> */}
+              <FooterDock 
+                mobileClassName="translate-y-20"
+              />
             </ul>
           </div>
 
