@@ -8,8 +8,11 @@
   }
   
   .animate-logo-cloud {
-    animation: logo-cloud 30s linear infinite;
-  }
+    /* display: flex;
+    gap: 2rem; 
+    min-width: 200%; */
+    animation: logo-cloud 20s linear infinite;
+ }
   
   /* Optional: Pause on hover */
   .group:hover .animate-logo-cloud {

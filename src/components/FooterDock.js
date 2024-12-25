@@ -4,9 +4,24 @@ import { Home, PenLine, Github, Linkedin, Twitter, Mail, Sun } from 'lucide-reac
 
 const NavItem = ({ icon: Icon, label }) => {
   const [isHovered, setIsHovered] = useState(false);
-  
+
+  const hoverStyles = {
+    opacity: 1,
+    transform: 'translateY(0)',
+  };
+
+  const defaultStyles = {
+    opacity: 0.7,
+    transform: 'translateY(2px)',
+  };
+
   return (
-    <div className="relative" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="relative"
+      style={isHovered ? hoverStyles : defaultStyles} // Apply styles based on hover state
+    >
       {isHovered && (
         <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black/80 text-white text-sm px-2 py-1 rounded-md whitespace-nowrap">
           {label}
@@ -27,12 +42,12 @@ const FooterDock = () => {
     { icon: Linkedin, label: 'LinkedIn' },
     { icon: Twitter, label: 'Twitter' },
     { icon: Mail, label: 'Contact' },
-    { icon: Sun, label: 'Theme' }
+    { icon: Sun, label: 'Theme' },
   ];
 
-return (
-    <div className="flex gap-6 pb-5">
-      <div className="border border-white/20 rounded-full px-4 py-3">
+  return (
+    <div className="flex gap-6 pb-5 flex-wrap justify-center"> {/* Add flex-wrap for responsiveness */}
+      <div className="border border-white/20 rounded-full px-4 py-3 sm:px-2 sm:py-1 md:px-3 md:py-2 lg:px-4 lg:py-3"> {/* Adjust padding based on screen size */}
         <div className="flex items-center gap-4">
           {navItems.map((item, index) => (
             <NavItem key={index} icon={item.icon} label={item.label} />
@@ -44,4 +59,3 @@ return (
 };
 
 export default FooterDock;
-
