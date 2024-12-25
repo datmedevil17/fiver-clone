@@ -63,6 +63,111 @@
 
 
 
+// "use client";
+// import React, { useState, useEffect } from 'react';
+// import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
+// import { cn } from "@/lib/utils";
+// import { motion, AnimatePresence } from 'framer-motion';
+
+// export function Navbar({ className }) {
+//     const [active, setActive] = useState(null);
+//     const [isScrolled, setIsScrolled] = useState(false);
+
+//     useEffect(() => {
+//         const handleScroll = () => {
+//             setIsScrolled(window.scrollY > 0);
+//         };
+
+//         window.addEventListener('scroll', handleScroll);
+
+//         return () => {
+//             window.removeEventListener('scroll', handleScroll);
+//         };
+//     }, []);
+
+//     return (
+//         <motion.div
+//             initial={{ opacity: 0 }}
+//             animate={{ opacity: 1 }}
+//             className={cn(
+//                 "fixed top-6 z-50 transition-all duration-700",
+//                 isScrolled ? "left-1/2 -translate-x-1/2 w-[40rem]" : "left-1/2 -translate-x-1/2 w-[32rem]",
+//                 className
+//             )}
+//         >
+//             <motion.div
+//                 initial={false}
+//                 animate={{ 
+//                     scale: isScrolled ? 1.05 : 1,
+//                 }}
+//                 transition={{ 
+//                     duration: 0.8,
+//                     ease: [0.19, 1, 0.22, 1],
+//                 }}
+//                 className={cn(
+//                     "flex justify-center w-full transition-all duration-700",
+//                     isScrolled 
+//                         ? "rounded-full border border-white/[0.2] bg-black/80 backdrop-blur-sm shadow-lg px-8 py-3" 
+//                         : "border-none bg-transparent px-4 py-3"
+//                 )}
+//             >
+//                 <Menu setActive={setActive}>
+//                     <div className={cn(
+//                         "flex items-center justify-center transition-all duration-700",
+//                         isScrolled ? "gap-10" : "gap-16"
+//                     )}>
+//                         <MenuItem setActive={setActive} active={active} item="Services">
+//                             <div className="flex flex-col space-y-4 text-sm">
+//                                 <HoveredLink href="/web-dev">Web Development</HoveredLink>
+//                                 <HoveredLink href="/interface-design">Interface Design</HoveredLink>
+//                                 <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+//                                 <HoveredLink href="/branding">Branding</HoveredLink>
+//                             </div>
+//                         </MenuItem>
+//                         <MenuItem setActive={setActive} active={active} item="Products">
+//                             <div className="  text-sm grid grid-cols-2 gap-10 p-4">
+//                               <ProductItem
+//                                 title="Algochurn"
+//                                 href="https://algochurn.com"
+//                                 src="https://assets.aceternity.com/demos/algochurn.webp"
+//                                 description="Prepare for tech interviews like never before."
+//                               />
+//                               <ProductItem
+//                                 title="Tailwind Master Kit"
+//                                 href="https://tailwindmasterkit.com"
+//                                 src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+//                                 description="Production ready Tailwind css components for your next project"
+//                               />
+//                               <ProductItem
+//                                 title="Moonbeam"
+//                                 href="https://gomoonbeam.com"
+//                                 src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+//                                 description="Never write from scratch again. Go from idea to blog in minutes."
+//                               />
+//                               <ProductItem
+//                                 title="Rogue"
+//                                 href="https://userogue.com"
+//                                 src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+//                                 description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+//                               />
+//                             </div>
+//                         </MenuItem>
+                        
+//                         <MenuItem setActive={setActive} active={active} item="Pricing">
+//                             <div className="flex flex-col space-y-4 text-sm">
+//                                 <HoveredLink href="/hobby">Hobby</HoveredLink>
+//                                 <HoveredLink href="/individual">Individual</HoveredLink>
+//                                 <HoveredLink href="/team">Team</HoveredLink>
+//                                 <HoveredLink href="/enterprise">Enterprise</HoveredLink>
+//                             </div>
+//                         </MenuItem>
+//                     </div>
+//                 </Menu>
+//             </motion.div>
+//         </motion.div>
+//     );
+// }
+
 "use client";
 import React, { useState, useEffect } from 'react';
 import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
@@ -72,18 +177,38 @@ import { motion, AnimatePresence } from 'framer-motion';
 export function Navbar({ className }) {
     const [active, setActive] = useState(null);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 0);
         };
 
+        const handleClickOutside = (event) => {
+            if (!event.target.closest('.navbar-menu')) {
+                setActive(null);
+                setIsMenuOpen(false);
+            }
+        };
+
         window.addEventListener('scroll', handleScroll);
+        document.addEventListener('mousedown', handleClickOutside);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
+
+    const handleMenuItemClick = (item) => {
+        if (active === item) {
+            setActive(null);
+            setIsMenuOpen(false);
+        } else {
+            setActive(item);
+            setIsMenuOpen(true);
+        }
+    };
 
     return (
         <motion.div
@@ -105,7 +230,7 @@ export function Navbar({ className }) {
                     ease: [0.19, 1, 0.22, 1],
                 }}
                 className={cn(
-                    "flex justify-center w-full transition-all duration-700",
+                    "flex justify-center w-full transition-all duration-700 navbar-menu",
                     isScrolled 
                         ? "rounded-full border border-white/[0.2] bg-black/80 backdrop-blur-sm shadow-lg px-8 py-3" 
                         : "border-none bg-transparent px-4 py-3"
@@ -116,7 +241,13 @@ export function Navbar({ className }) {
                         "flex items-center justify-center transition-all duration-700",
                         isScrolled ? "gap-10" : "gap-16"
                     )}>
-                        <MenuItem setActive={setActive} active={active} item="Services">
+                        <MenuItem 
+                            setActive={setActive} 
+                            active={active} 
+                            item="Services"
+                            onClick={() => handleMenuItemClick("Services")}
+                            isOpen={isMenuOpen}
+                        >
                             <div className="flex flex-col space-y-4 text-sm">
                                 <HoveredLink href="/web-dev">Web Development</HoveredLink>
                                 <HoveredLink href="/interface-design">Interface Design</HoveredLink>
@@ -124,36 +255,47 @@ export function Navbar({ className }) {
                                 <HoveredLink href="/branding">Branding</HoveredLink>
                             </div>
                         </MenuItem>
-                        <MenuItem setActive={setActive} active={active} item="Products">
-                            <div className="  text-sm grid grid-cols-2 gap-10 p-4">
-                              <ProductItem
-                                title="Algochurn"
-                                href="https://algochurn.com"
-                                src="https://assets.aceternity.com/demos/algochurn.webp"
-                                description="Prepare for tech interviews like never before."
-                              />
-                              <ProductItem
-                                title="Tailwind Master Kit"
-                                href="https://tailwindmasterkit.com"
-                                src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                                description="Production ready Tailwind css components for your next project"
-                              />
-                              <ProductItem
-                                title="Moonbeam"
-                                href="https://gomoonbeam.com"
-                                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-                                description="Never write from scratch again. Go from idea to blog in minutes."
-                              />
-                              <ProductItem
-                                title="Rogue"
-                                href="https://userogue.com"
-                                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-                                description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-                              />
+                        <MenuItem 
+                            setActive={setActive} 
+                            active={active} 
+                            item="Products"
+                            onClick={() => handleMenuItemClick("Products")}
+                            isOpen={isMenuOpen}
+                        >
+                            <div className="text-sm grid grid-cols-2 gap-10 p-4">
+                                <ProductItem
+                                    title="Algochurn"
+                                    href="https://algochurn.com"
+                                    src="https://assets.aceternity.com/demos/algochurn.webp"
+                                    description="Prepare for tech interviews like never before."
+                                />
+                                <ProductItem
+                                    title="Tailwind Master Kit"
+                                    href="https://tailwindmasterkit.com"
+                                    src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                                    description="Production ready Tailwind css components for your next project"
+                                />
+                                <ProductItem
+                                    title="Moonbeam"
+                                    href="https://gomoonbeam.com"
+                                    src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+                                    description="Never write from scratch again. Go from idea to blog in minutes."
+                                />
+                                <ProductItem
+                                    title="Rogue"
+                                    href="https://userogue.com"
+                                    src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+                                    description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
+                                />
                             </div>
                         </MenuItem>
-                        
-                        <MenuItem setActive={setActive} active={active} item="Pricing">
+                        <MenuItem 
+                            setActive={setActive} 
+                            active={active} 
+                            item="Pricing"
+                            onClick={() => handleMenuItemClick("Pricing")}
+                            isOpen={isMenuOpen}
+                        >
                             <div className="flex flex-col space-y-4 text-sm">
                                 <HoveredLink href="/hobby">Hobby</HoveredLink>
                                 <HoveredLink href="/individual">Individual</HoveredLink>
