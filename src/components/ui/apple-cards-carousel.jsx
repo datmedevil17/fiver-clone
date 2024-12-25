@@ -26,19 +26,64 @@ export const Carousel = ({
   initialScroll = 0
 }) => {
   const carouselRef = React.useRef(null);
+  const containerRef = React.useRef(null);
+  const [containerWidth, setContainerWidth] = useState(0);
   // const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   // const [canScrollRight, setCanScrollRight] = React.useState(true);
+  const [isMobile, setIsMobile] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   // Calculate item dimensions
+  // const getItemDimensions = () => {
+  //   const isMobile = window && window.innerWidth < 768;
+  //   return {
+  //     width: isMobile ? 230 : 384, // (md:w-96)
+  //     gap: isMobile ? 4 : 8
+  //   };
+  // };
+
+  // CHANGED: Modified getItemDimensions to be responsive
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const getItemDimensions = () => {
-    const isMobile = window && window.innerWidth < 768;
     return {
-      width: isMobile ? 230 : 384, // (md:w-96)
-      gap: isMobile ? 4 : 8
+      width: isMobile ? 230 : Math.min(384, containerWidth * 0.3),
+      gap: isMobile ? 16 : Math.min(32, containerWidth * 0.02)
     };
   };
+
+// const getItemDimensions = () => {
+//   const isMobile = window && window.innerWidth < 768;
+//   return {
+//     // CHANGED: Now calculates width based on container size
+//     width: isMobile ? 230 : Math.min(384, containerWidth * 0.3),
+//     // CHANGED: Responsive gap
+//     gap: isMobile ? 16 : Math.min(32, containerWidth * 0.02)
+//   };
+// };
+
+// Update container width on resize
+useEffect(() => {
+  const updateWidth = () => {
+    if (containerRef.current) {
+      setContainerWidth(containerRef.current.offsetWidth);
+    }
+  };
+
+  updateWidth();
+  window.addEventListener('resize', updateWidth);
+  return () => window.removeEventListener('resize', updateWidth);
+}, []);
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -201,12 +246,12 @@ export const Carousel = ({
 
 return (
   <CarouselContext.Provider value={{ onCardClose: handleCardClose, currentIndex }}>
-    <div className="relative w-full">
+    <div className="relative w-full"  ref={containerRef} >
       <div
         className="flex w-full overflow-x-scroll overscroll-x-auto py-10 md:py-20 scroll-smooth [scrollbar-width:none]"
         ref={carouselRef}>
         <div className={cn(
-          "flex flex-row justify-start gap-4 pl-4",
+         "flex flex-row gap-4 md:gap-8 px-4 md:px-8",
           "mx-auto"
         )}>
           {extendedItems.map((item, index) => (
@@ -226,13 +271,16 @@ return (
                 },
               }}
               key={"card" + index}
-              className="last:pr-[5%] md:last:pr-[33%] rounded-3xl">
+              style={{
+                flex: `0 0 ${getItemDimensions().width}px`
+              }}
+              className="rounded-3xl">
               {item}
             </motion.div>
           ))}
         </div>
       </div>
-      <div className="flex justify-end gap-2 mr-10">
+      <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 flex justify-center gap-4">
         <button
           className="relative z-40 h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center"
           onClick={() => scrollTo('left')}>
