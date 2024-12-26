@@ -9,28 +9,29 @@ const HeroSection = () => {
               className="-top-40 left-0 md:left-60 md:-top-20"
               fill="white"
             />
-      <div className="max-w-7xl lg:h-2xl mx-auto flex flex-col lg:flex-row items-center justify-between w-full px-6 sm:px-8 lg:px-16 pt-5 md:pt-0 space-y-8 lg:space-y-0">
-        {/* Text Content */}
-        <div className="lg:w-1/2 flex flex-col items-start text-left">
-  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 leading-tight">
-    Spotlight is the Future
-  </h1>
+     <div className="flex flex-col lg:flex-row items-center justify-between w-full px-6 lg:px-16 py-10 space-y-10 lg:space-y-0">
+  {/* Left Content */}
+  <div className="lg:w-1/2">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+      Discover the Future of Interaction
+    </h1>
+    <p className="mt-4 text-gray-600 text-lg sm:text-xl">
+      Explore the seamless integration of 3D models with modern design.
+      Experience interactive, engaging content that adapts to any screen size.
+    </p>
+  </div>
 
-  <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-neutral-300 max-w-lg leading-relaxed">
-    Experience the beauty of modern design with responsive layouts and a spotlight effect that draws attention to the essential elements of the page.
-  </p>
+  {/* 3D Model */}
+  <div className="lg:w-1/2 flex justify-center lg:justify-end">
+    <div className="w-300px h-[300px] sm:h-[300px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px]">
+      <Spline
+        scene="https://prod.spline.design/8fcFSxa15zPBmmEZ/scene.splinecode"
+        className="w-full h-full"
+      />
+    </div>
+  </div>
 </div>
 
-        {/* 3D Model */}
-        <div className="lg:w-1/2 flex justify-center lg:justify-end">
-          <div className="w-full h-[200px] sm:h-[300px] md:h-[500px] lg:h-[600px] xl:h-[700px] 2xl:h-[800px]">
-            <Spline
-              scene="https://prod.spline.design/8fcFSxa15zPBmmEZ/scene.splinecode"
-              className="w-full h-full"
-            />
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
