@@ -135,7 +135,7 @@ const AnimatedLogoCloud = () => {
                   key={`${groupIndex}-${logo.name}`}
                   src={logo.url}
                   onError={() => handleImageError(logo.name)}
-                  className="h-8 w-auto px-2 text-white dark:invert"
+                  className="h-8 w-auto px-2 text-white dark:invert brightness-0"
                   alt={logo.name}
                 />
               ))}

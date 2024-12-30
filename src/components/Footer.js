@@ -100,149 +100,183 @@ function Footer() {
     },
 ]
 
- const iconSlugs = [
-  // Frontend
+//  const iconSlugs = [
+//   // Frontend
+//   "typescript",
+//   "javascript",
+//   "react",
+//   "vuejs",
+//   "angular",
+//   "svelte",
+//   "html5",
+//   "css3",
+//   "sass",
+//   "less",
+//   "styled-components",
+//   "tailwindcss",
+//   "framermotion",
+//   "threejs",
+//   "figma",
+//   "sketch",
+//   "adobexd",
+
+//   // Backend
+//   "nodejs",
+//   "express",
+//   "nestjs",
+//   "python",
+//   "django",
+//   "flask",
+//   "java",
+//   "spring",
+//   "php",
+//   "laravel",
+//   "ruby",
+//   "rails",
+//   "go",
+//   "golang",
+//   "rust",
+//   "dotnet",
+//   "csharp",
+//   "aws",
+//   "azure",
+//   "gcp",
+//   "docker",
+//   "kubernetes",
+
+//   // Databases
+//   "postgresql",
+//   "mysql",
+//   "mongodb",
+//   "redis",
+//   "elasticsearch",
+//   "graphql",
+
+//   // DevOps
+//   "jenkins",
+//   "gitlab",
+//   "circleci",
+//   "terraform",
+//   "ansible",
+//   "vagrant",
+
+//   // Testing
+//   "jest",
+//   "mocha",
+//   "selenium",
+//   "cypress",
+
+//   // Version Control
+//   "git",
+//   "github",
+//   "gitlab",
+//   "bitbucket",
+
+//   // Other
+//   "webpack",
+//   "babel",
+//   "eslint",
+//   "prettier",
+//   "npm",
+//   "yarn",
+//   "pwa",
+//   "graphql",
+//   "rest",
+//   "ai",
+//   "machinelearning",
+//   "datascience",
+//   "cybersecurity",
+//   "blockchain",
+//   "ethereum",
+//   "solidity", 
+//   "hardhat",
+//   "wagmi",
+//   "foundry",
+//   "move",
+//   "aptos",
+//   "figma",
+//   "sketch",
+//   "adobexd", 
+//   "xd",
+//   "blender",
+//   "photoshop", 
+// ];
+
+const iconSlugs = [
   "typescript",
   "javascript",
+  "dart",
+  "java",
   "react",
-  "vuejs",
-  "angular",
-  "svelte",
+  "flutter",
+  "android",
   "html5",
   "css3",
-  "sass",
-  "less",
-  "styled-components",
-  "tailwindcss",
-  "framermotion",
-  "threejs",
-  "figma",
-  "sketch",
-  "adobexd",
-
-  // Backend
-  "nodejs",
+  "nodedotjs",
   "express",
-  "nestjs",
-  "python",
-  "django",
-  "flask",
-  "java",
-  "spring",
-  "php",
-  "laravel",
-  "ruby",
-  "rails",
-  "go",
-  "golang",
-  "rust",
-  "dotnet",
-  "csharp",
-  "aws",
-  "azure",
-  "gcp",
-  "docker",
-  "kubernetes",
-
-  // Databases
+  "nextdotjs",
+  "prisma",
+  "amazonaws",
   "postgresql",
-  "mysql",
-  "mongodb",
-  "redis",
-  "elasticsearch",
-  "graphql",
-
-  // DevOps
-  "jenkins",
-  "gitlab",
-  "circleci",
-  "terraform",
-  "ansible",
-  "vagrant",
-
-  // Testing
+  "firebase",
+  "nginx",
+  "vercel",
+  "testinglibrary",
   "jest",
-  "mocha",
-  "selenium",
   "cypress",
-
-  // Version Control
+  "docker",
   "git",
+  "jira",
   "github",
   "gitlab",
-  "bitbucket",
-
-  // Other
-  "webpack",
-  "babel",
-  "eslint",
-  "prettier",
-  "npm",
-  "yarn",
-  "pwa",
-  "graphql",
-  "rest",
-  "ai",
-  "machinelearning",
-  "datascience",
-  "cybersecurity",
-  "blockchain",
-  "ethereum",
-  "solidity", 
-  "hardhat",
-  "wagmi",
-  "foundry",
-  "move",
-  "aptos",
+  "visualstudiocode",
+  "androidstudio",
+  "sonarqube",
   "figma",
-  "sketch",
-  "adobexd", 
-  "xd",
-  "blender",
-  "photoshop", 
 ];
-
 
 return (
   <div>
-    <VortexDemo/>
-    <AnimatedLogoCloud />
-    <div className="w-full rounded-md bg-black relative flex md:flex-row flex-col items-center justify-center antialiased">
-      <BackgroundBeams />
-      <footer className="bg-black w-full">
-        <div className="w-full flex md:flex-row flex-col justify-around items-start p-10">
-          {/* Company Socials */}
-          <div className="p-5">  
-            <ul>
-              <p className="text-white font-bold text-3xl pb-6">
-                Company <span className="text-blue-600">Name</span>
-              </p>
-              <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">Who We Are</a>
-                </li>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 hover:underline transition-colors duration-200 cursor-pointer">
-                  <a href="">Get in Touch</a>
-                </li>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">Careers</a>
-                </li>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">Our Mission & Vision</a>
-                </li>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">Business Model</a>
-                </li>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">Our Consultants</a>
-                </li>
-              {/* <FloatingDock
-              mobileClassName="translate-y-20"
-              items={links}/> */}
-            </ul>
-            <div className="mt-8">
-                 <FooterDock mobileClassName="translate-y-20"/>
+      <VortexDemo/>
+      {/* <AnimatedLogoCloud /> */}
+      <div className="w-full rounded-md bg-black relative flex md:flex-row flex-col items-center justify-center antialiased">
+        <BackgroundBeams />
+        <footer className="bg-black w-full">
+          <div className="w-full flex md:flex-row flex-col justify-around items-start p-10">
+            {/* Company Socials - Updated with better vertical spacing */}
+            <div className="p-5 flex flex-col items-start">  
+              <div className="flex flex-col space-y-4">
+                <p className="text-white font-bold text-3xl">
+                  Company <span className="text-blue-600">Name</span>
+                </p>
+                <div className="flex flex-col space-y-2">
+                  <ul className="space-y-2">
+                    <li className="text-gray-300 text-md font-semibold hover:text-blue-600 cursor-pointer">
+                      <a href="">Who We Are</a>
+                    </li>
+                    <li className="text-gray-300 text-md font-semibold hover:text-blue-600 hover:underline transition-colors duration-200 cursor-pointer">
+                      <a href="">Get in Touch</a>
+                    </li>
+                    <li className="text-gray-300 text-md font-semibold hover:text-blue-600 cursor-pointer">
+                      <a href="">Careers</a>
+                    </li>
+                    <li className="text-gray-300 text-md font-semibold hover:text-blue-600 cursor-pointer">
+                      <a href="">Our Mission & Vision</a>
+                    </li>
+                    <li className="text-gray-300 text-md font-semibold hover:text-blue-600 cursor-pointer">
+                      <a href="">Business Model</a>
+                    </li>
+                    <li className="text-gray-300 text-md font-semibold hover:text-blue-600 cursor-pointer">
+                      <a href="">Our Consultants</a>
+                    </li>
+                  </ul>
+                  {/* FooterDock aligned with text */}
+                  <div className="-ml-6 pt-8"> 
+                    <FooterDock mobileClassName="translate-y-20"/>
+                  </div>
+                </div> 
+              </div>
             </div>
-          </div>
 
           {/* Content */}
           <div className="p-5 flex flex-col items-start">
