@@ -240,14 +240,14 @@ return (
       <VortexDemo/>
       {/* <AnimatedLogoCloud /> */}
       <div className="w-full rounded-md bg-black relative flex md:flex-row flex-col items-center justify-center antialiased">
-        {/* <BackgroundBeams /> */}
+        <BackgroundBeams />
         <footer className="bg-black w-full">
           <div className="w-full flex md:flex-row flex-col justify-around items-start p-10">
             {/* Company Socials - Updated with better vertical spacing */}
             <div className="p-5 flex flex-col items-start">  
               <div className="flex flex-col space-y-4">
                 <p className="text-white font-bold text-3xl">
-                  Elixir <span className="text-blue-600">M</span>
+                  Company <span className="text-blue-600">Name</span>
                 </p>
                 <div className="flex flex-col space-y-2">
                   <ul className="space-y-2">
