@@ -51,7 +51,7 @@ export function Navbar({ className }) {
     const toggleMobileItem = (title) => {
         console.log('Toggling item:', title); // Add this for debugging
         setExpandedMobileItems(expandedMobileItems === title ? null : title);
-    };
+    };n
 
     const menuItems = [
         {

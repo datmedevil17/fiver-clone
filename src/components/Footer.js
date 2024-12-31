@@ -237,11 +237,10 @@ const iconSlugs = [
 
 return (
   <div>
-    {/* <AnimatedLogoCloud /> */}
       <VortexDemo/>
-      
+      {/* <AnimatedLogoCloud /> */}
       <div className="w-full rounded-md bg-black relative flex md:flex-row flex-col items-center justify-center antialiased">
-        {/* <BackgroundBeams /> */}
+        <BackgroundBeams />
         <footer className="bg-black w-full">
           <div className="w-full flex md:flex-row flex-col justify-around items-start p-10">
             {/* Company Socials - Updated with better vertical spacing */}
@@ -255,7 +254,7 @@ return (
                     <li className="text-gray-300 text-md font-semibold hover:text-blue-600 cursor-pointer">
                       <a href="">Who We Are</a>
                     </li>
-                    <li className="text-gray-300 text-md font-semibold hover:text-blue-600 cursor-pointer ">
+                    <li className="text-gray-300 text-md font-semibold hover:text-blue-600 hover:underline transition-colors duration-200 cursor-pointer">
                       <a href="">Get in Touch</a>
                     </li>
                     <li className="text-gray-300 text-md font-semibold hover:text-blue-600 cursor-pointer">
@@ -280,41 +279,7 @@ return (
             </div>
 
           {/* Content */}
-            <div className="p-5 flex flex-col items-start">
-              <ul>
-                <p className="text-white font-bold text-2xl pb-4">About</p>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">About Company</a>
-                </li>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">Vision & Mission</a>
-                </li>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">Become our Partner</a>
-                </li>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">Our Technology Partners</a>
-                </li>
-              </ul>
-              <br></br>
-              <br></br>
-              <ul>
-                <p className="text-white font-bold text-2xl pb-4">Blogs</p>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">About Company</a>
-                </li>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">Vision & Mission</a>
-                </li>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">Become our Partner</a>
-                </li>
-                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
-                  <a href="">Our Technology Partners</a>
-                </li>
-              </ul>
-            </div>
-            <div className="p-5 flex flex-col items-start">
+          <div className="p-5 flex flex-col items-start">
               <ul>
                 <p className="text-white font-bold text-2xl pb-4">Services</p>
                 <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
@@ -358,6 +323,40 @@ return (
                 </li>
                 <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
                   <a href="">System Integeration Services</a>
+                </li>
+              </ul>
+            </div>
+            <div className="p-5 flex flex-col items-start">
+              <ul>
+                <p className="text-white font-bold text-2xl pb-4">About</p>
+                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+                  <a href="">About Company</a>
+                </li>
+                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 hover:underline transition-colors duration-200 cursor-pointer">
+                  <a href="">Vision & Mission</a>
+                </li>
+                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+                  <a href="">Become our Partner</a>
+                </li>
+                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+                  <a href="">Our Technology Partners</a>
+                </li>
+              </ul>
+              <br></br>
+              <br></br>
+              <ul>
+                <p className="text-white font-bold text-2xl pb-4">Blogs</p>
+                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+                  <a href="">About Company</a>
+                </li>
+                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 hover:underline transition-colors duration-200 cursor-pointer">
+                  <a href="">Vision & Mission</a>
+                </li>
+                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+                  <a href="">Become our Partner</a>
+                </li>
+                <li className="text-gray-300 text-md pb-2 font-semibold hover:text-blue-600 cursor-pointer">
+                  <a href="">Our Technology Partners</a>
                 </li>
               </ul>
             </div>
