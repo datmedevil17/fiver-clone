@@ -143,7 +143,8 @@ export function Navbar({ className }) {
                     )}
                 >
                     <div className={cn(
-                        "flex items-center",
+                        "  flex items-center",
+                        isMobileMenuOpen ? "hidden lg:flex" : "flex",
                         isScrolled ? "lg:hidden" : ""  // Hide on desktop when scrolled
                     )}>
                         <img
