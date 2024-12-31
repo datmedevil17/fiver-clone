@@ -26,7 +26,7 @@ export function Navbar({ className }) {
 
         window.addEventListener('scroll', handleScroll);
         window.addEventListener('resize', handleResize);
-        
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('resize', handleResize);
@@ -51,7 +51,7 @@ export function Navbar({ className }) {
     const toggleMobileItem = (title) => {
         console.log('Toggling item:', title); // Add this for debugging
         setExpandedMobileItems(expandedMobileItems === title ? null : title);
-    };n
+    };
 
     const menuItems = [
         {
@@ -127,14 +127,14 @@ export function Navbar({ className }) {
                 animate={{ opacity: 1 }}
                 className={cn(
                     "w-[80%] transition-all duration-700",
-                    isScrolled 
-                        ? "flex items-center justify-center" 
+                    isScrolled
+                        ? "flex items-center justify-center"
                         : "flex items-center justify-between"
                 )}
             >
                 <motion.div
                     initial={false}
-                    animate={{ 
+                    animate={{
                         scale: 1,
                     }}
                     className={cn(
@@ -146,8 +146,8 @@ export function Navbar({ className }) {
                         "flex items-center",
                         isScrolled ? "lg:hidden" : ""  // Hide on desktop when scrolled
                     )}>
-                        <img 
-                            src="output-onlinepngtools (2).png"  
+                        <img
+                            src="output-onlinepngtools (2).png"
                             alt="Logo"
                             className="h-12 w-auto"
                         />
@@ -155,40 +155,40 @@ export function Navbar({ className }) {
 
                     <motion.div
                         initial={false}
-                        animate={{ 
+                        animate={{
                             scale: isScrolled ? 1.05 : 1,
                         }}
-                        transition={{ 
+                        transition={{
                             duration: 0.8,
                             ease: [0.19, 1, 0.22, 1],
                         }}
                         className={cn(
                             "hidden lg:flex items-center transition-all duration-700 navbar-menu",
-                            isScrolled 
-                                ? "rounded-full border border-white/[0.2] bg-black/80 backdrop-blur-sm shadow-lg px-8 py-3" 
+                            isScrolled
+                                ? "rounded-full border border-white/[0.2] bg-black/80 backdrop-blur-sm shadow-lg px-8 py-3"
                                 : "border-none bg-transparent px-4 py-3"
                         )}
                     >
                         {isScrolled && (
                             <div className="hidden lg:flex items-center mr-8">
-                                <img 
-                                    src="output-onlinepngtools (1).png"  
+                                <img
+                                    src="output-onlinepngtools (1).png"
                                     alt="Logo"
                                     className="h-12 w-auto"
                                 />
                             </div>
                         )}
-                        
+
                         <Menu setActive={setActive}>
                             <div className={cn(
                                 "flex items-center transition-all duration-700",
                                 isScrolled ? "gap-8" : "gap-12"
                             )}>
                                 {menuItems.map((menuItem) => (
-                                    <MenuItem 
+                                    <MenuItem
                                         key={menuItem.title}
-                                        setActive={setActive} 
-                                        active={active} 
+                                        setActive={setActive}
+                                        active={active}
                                         item={menuItem.title}
                                         onClick={() => handleMenuItemClick(menuItem.title)}
                                         isOpen={isMenuOpen}
@@ -215,7 +215,7 @@ export function Navbar({ className }) {
                                 ))}
                             </div>
                         </Menu>
-                        
+
                         {isScrolled && (
                             <motion.button
                                 initial={{ opacity: 0 }}
@@ -233,8 +233,8 @@ export function Navbar({ className }) {
                             onClick={toggleMobileMenu}
                             className={cn(
                                 "p-2 rounded-full transition-colors duration-200",
-                                isScrolled 
-                                    ? "text-white hover:bg-white/20" 
+                                isScrolled
+                                    ? "text-white hover:bg-white/20"
                                     : "text-white hover:bg-black/20"
                             )}
                         >
@@ -259,21 +259,21 @@ export function Navbar({ className }) {
                             className="flex items-center justify-between w-full py-3 text-white"
                         >
                             <span>{menuItem.title}</span>
-                            <ChevronDown 
-                                size={16} 
+                            <ChevronDown
+                                size={16}
                                 className={`transform transition-transform ${
                                     expandedMobileItems === menuItem.title ? 'rotate-180' : ''
                                 }`}
                             />
                         </button>
-                        
+
                         <div className={`overflow-hidden transition-all duration-300 ${
                             expandedMobileItems === menuItem.title ? 'max-h-96 pb-3' : 'max-h-0'
                         }`}>
                             <div className="pl-4 flex flex-col space-y-2">
                                 {menuItem.items[0].type === "product" ? (
                                     menuItem.items[0].products.map((product) => (
-                                        <Link 
+                                        <Link
                                             key={product.title}
                                             href={product.href}
                                             className="text-gray-300 hover:text-white py-1"
@@ -283,7 +283,7 @@ export function Navbar({ className }) {
                                     ))
                                 ) : (
                                     menuItem.items.map((item) => (
-                                        <Link 
+                                        <Link
                                             key={item.href}
                                             href={item.href}
                                             className="text-gray-300 hover:text-white py-1"

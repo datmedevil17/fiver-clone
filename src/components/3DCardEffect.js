@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export function ThreeDCardDemo() {
   return (
-    <div className="w-full overflow-x-auto px-4 md:px-6 py-6">
+    <div className="w-full overflow-x-auto px-6 md:px-8 py-2">
         <div className="flex flex-col md:flex-row gap-6 min-w-full">
             <CardContainer className="inter-var w-full">
             <CardBody
@@ -129,7 +129,7 @@ export function ThreeDCardDemo() {
             </div>
         </CardBody>
             </CardContainer>
-        </div>   
-    </div>    
+        </div>
+    </div>
   );
 }
