@@ -5,6 +5,7 @@ import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import { ThreeDCard, ThreeDCardGrid } from "@/components/3DCardEffect";
 import { WobbleCardDemo } from "@/components/WobbleCard";
+import { Navbar } from "@/components/Navbar";
 
 const projects = [
   {
@@ -86,6 +87,7 @@ const testimonials = [
 const Page = () => {
   return (
     <div className="bg-black text-white">
+      <Navbar className="top-2"/>
       {/* Hero Section */}
       <CustomVid
         videoSrc="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4"
