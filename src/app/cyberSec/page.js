@@ -3,7 +3,7 @@ import CustomVid from "@/components/CustomVid";
 import Footer from "@/components/Footer";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
-import { WobbleCardDemo } from "@/components/WobbleCardDemo";
+import { WobbleCardDemo } from "@/components/WobbleCard";
 
 const projects = [
   {
@@ -97,7 +97,7 @@ const Page = () => {
       />
 
       {/* Projects Section */}
-      <div className="container mx-auto py-16 px-4 sm:px-8 lg:px-16">
+      {/* <div className="container mx-auto py-16 px-4 sm:px-8 lg:px-16">
         <h2 className="text-3xl font-bold mb-8 text-center">Our Projects</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
@@ -118,11 +118,11 @@ const Page = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* 3D Card Section */}
       <ThreeDCardDemo />
-      <AnimatedTestimonials  testimonials={testimonials} />
+      {/* <AnimatedTestimonials  testimonials={testimonials} /> */}
       <WobbleCardDemo/>
 
       {/* Footer Section */}
