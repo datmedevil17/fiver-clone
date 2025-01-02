@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { BackgroundBeams } from "../components/ui/background-beam";
 // import LogoSlider from "./LogoSlider";
 import { FloatingDock } from "./ui/floating-dock";
+import { FlipWords } from "./ui/flip-words";
 import {
   IconBrandGithub,
   IconBrandX,
@@ -188,7 +189,7 @@ function Footer() {
 //   "cybersecurity",
 //   "blockchain",
 //   "ethereum",
-//   "solidity", 
+//   "solidity",
 //   "hardhat",
 //   "wagmi",
 //   "foundry",
@@ -196,10 +197,10 @@ function Footer() {
 //   "aptos",
 //   "figma",
 //   "sketch",
-//   "adobexd", 
+//   "adobexd",
 //   "xd",
 //   "blender",
-//   "photoshop", 
+//   "photoshop",
 // ];
 
 const iconSlugs = [
@@ -244,10 +245,11 @@ return (
         <footer className="bg-black w-full">
           <div className="w-full flex md:flex-row flex-col justify-around items-start p-10">
             {/* Company Socials - Updated with better vertical spacing */}
-            <div className="p-5 flex flex-col items-start">  
+            <div className="p-5 flex flex-col items-start">
               <div className="flex flex-col space-y-4">
                 <p className="text-white font-bold text-3xl">
-                  Company <span className="text-blue-600">Name</span>
+                <h4 class="text-5xl font-bold text-purple-600 glow-animation">Elixir</h4>
+
                 </p>
                 <div className="flex flex-col space-y-2">
                   <ul className="space-y-2">
@@ -271,10 +273,10 @@ return (
                     </li>
                   </ul>
                   {/* FooterDock aligned with text */}
-                  <div className="-ml-6 pt-8"> 
+                  <div className="-ml-6 pt-8">
                     <FooterDock mobileClassName="translate-y-20"/>
                   </div>
-                </div> 
+                </div>
               </div>
             </div>
 
@@ -360,7 +362,7 @@ return (
                 </li>
               </ul>
             </div>
-            
+
 
           <div className="relative flex size-full max-w-xl items-center justify-center overflow-hidden rounded-lg px-8 min-w-64 sm:pb-0 pb-4">
             <IconCloud iconSlugs={iconSlugs}/>
