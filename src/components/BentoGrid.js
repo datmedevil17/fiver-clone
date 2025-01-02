@@ -47,7 +47,7 @@ export function FeaturesSectionDemo() {
   ];
 
   return (
-    <div className="w-full bg-black px-16">
+    <div className="w-full bg-black px-16 py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full">
         {features.map((feature, index) => (
           <Feature key={feature.title} {...feature} index={index} />
