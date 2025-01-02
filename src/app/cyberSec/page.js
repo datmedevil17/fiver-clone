@@ -1,8 +1,9 @@
 import React from "react";
 import CustomVid from "@/components/CustomVid";
 import Footer from "@/components/Footer";
-import { ThreeDCardDemo } from "@/components/3DCardEffect";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
+import { WobbleCardDemo } from "@/components/WobbleCardDemo";
 
 const projects = [
   {
@@ -122,6 +123,7 @@ const Page = () => {
       {/* 3D Card Section */}
       <ThreeDCardDemo />
       <AnimatedTestimonials  testimonials={testimonials} />
+      <WobbleCardDemo/>
 
       {/* Footer Section */}
       <Footer />
