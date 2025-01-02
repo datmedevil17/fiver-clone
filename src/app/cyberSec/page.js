@@ -4,6 +4,9 @@ import Footer from "@/components/Footer";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import { WobbleCardDemo } from "@/components/WobbleCard";
+import ThreeDServices from "@/components/3DElement";
+import { ThreeDCard, ThreeDCardGrid } from "@/components/3DCardEffect";
+import { Navbar } from "@/components/Navbar";
 
 const projects = [
   {
@@ -85,6 +88,7 @@ const testimonials = [
 const Page = () => {
   return (
     <div className="bg-black text-white">
+      <Navbar className="top-2"/>
       {/* Hero Section */}
       <CustomVid
         videoSrc="https://videos.pexels.com/video-files/5223113/5223113-hd_2560_1440_30fps.mp4"
@@ -121,8 +125,60 @@ const Page = () => {
       </div> */}
 
       {/* 3D Card Section */}
-      <ThreeDCardDemo />
+      <ThreeDCardGrid>
+              <ThreeDCard
+                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+                  title="First Card"
+                  description="Description for first card"
+                  tryNowLink="https://example.com/1"
+              />
+             <ThreeDCard
+                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+                  title="First Card"
+                  description="Description for first card"
+                  tryNowLink="https://example.com/1"
+              />
+              <ThreeDCard
+                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+                  title="First Card"
+                  description="Description for first card"
+                  tryNowLink="https://example.com/1"
+              />
+              <ThreeDCard
+                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+                  title="First Card"
+                  description="Description for first card"
+                  tryNowLink="https://example.com/1"
+              />   
+              <ThreeDCard
+                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+                  title="First Card"
+                  description="Description for first card"
+                  tryNowLink="https://example.com/1"
+              />
+              <ThreeDCard
+                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+                  title="First Card"
+                  description="Description for first card"
+                  tryNowLink="https://example.com/1"
+              />
+              <ThreeDCard
+                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+                  title="First Card"
+                  description="Description for first card"
+                  tryNowLink="https://example.com/1"
+              />
+              <ThreeDCard
+                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+                  title="First Card"
+                  description="Description for first card"
+                  tryNowLink="https://example.com/1"
+              />
+                
+              </ThreeDCardGrid>
+      {/* <ThreeDCardDemo /> */}
       {/* <AnimatedTestimonials  testimonials={testimonials} /> */}
+      <ThreeDServices/>
       <WobbleCardDemo/>
 
       {/* Footer Section */}
