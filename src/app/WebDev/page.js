@@ -3,9 +3,8 @@ import CustomVid from "@/components/CustomVid";
 import Footer from "@/components/Footer";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
-import { WobbleCardDemo } from "@/components/WobbleCard";
-import ThreeDServices from "@/components/3DElement";
 import { ThreeDCard, ThreeDCardGrid } from "@/components/3DCardEffect";
+import { WobbleCardDemo } from "@/components/WobbleCard";
 import { Navbar } from "@/components/Navbar";
 
 const projects = [
@@ -91,13 +90,9 @@ const Page = () => {
       <Navbar className="top-2"/>
       {/* Hero Section */}
       <CustomVid
-        videoSrc="https://videos.pexels.com/video-files/5223113/5223113-hd_2560_1440_30fps.mp4"
-        heading="CyberSecurity"
-        content="Elixir provides comprehensive cybersecurity services to safeguard your business in today's increasingly digital landscape.
-              Our team of experts delivers a wide range of solutions, including advanced threat detection and response, vulnerability assessments, penetration testing,
-              and the implementation of robust security controls. By leveraging cutting-edge technologies and adhering to industry best practices, we proactively identify
-              and mitigate potential risks, ensuring your data, systems, and reputation remain protected. With Elixir, you can experience peace of mind knowing your digital
-              assets are in capable hands and your business is well-equipped to withstand evolving cyber threats."
+        videoSrc="https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4"
+        heading="Web Development"
+        content="Elixir offers exceptional web development services designed to elevate your business in today's dynamic digital environment. Our team of skilled developers delivers a broad spectrum of solutions, including custom website design, responsive and mobile-first development, e-commerce platforms, and seamless API integrations. By utilizing the latest technologies and following industry-leading practices, we create visually stunning, high-performing, and secure websites tailored to your unique needs. With Elixir, you can transform your online presence, enhance user experiences, and drive business growth with a reliable partner dedicated to bringing your vision to life."
       />
 
       {/* Projects Section */}
@@ -123,62 +118,61 @@ const Page = () => {
           ))}
         </div>
       </div> */}
-
+        <ThreeDCardGrid>
+        <ThreeDCard
+            imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+            title="First Card"
+            description="Description for first card"
+            tryNowLink="https://example.com/1"
+        />
+       <ThreeDCard
+            imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+            title="First Card"
+            description="Description for first card"
+            tryNowLink="https://example.com/1"
+        />
+        <ThreeDCard
+            imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+            title="First Card"
+            description="Description for first card"
+            tryNowLink="https://example.com/1"
+        />
+        <ThreeDCard
+            imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+            title="First Card"
+            description="Description for first card"
+            tryNowLink="https://example.com/1"
+        />   
+        <ThreeDCard
+            imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+            title="First Card"
+            description="Description for first card"
+            tryNowLink="https://example.com/1"
+        />
+        <ThreeDCard
+            imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+            title="First Card"
+            description="Description for first card"
+            tryNowLink="https://example.com/1"
+        />
+        <ThreeDCard
+            imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+            title="First Card"
+            description="Description for first card"
+            tryNowLink="https://example.com/1"
+        />
+        <ThreeDCard
+            imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
+            title="First Card"
+            description="Description for first card"
+            tryNowLink="https://example.com/1"
+        />
+          
+        </ThreeDCardGrid>
       {/* 3D Card Section */}
-      <ThreeDCardGrid>
-              <ThreeDCard
-                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
-                  title="First Card"
-                  description="Description for first card"
-                  tryNowLink="https://example.com/1"
-              />
-             <ThreeDCard
-                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
-                  title="First Card"
-                  description="Description for first card"
-                  tryNowLink="https://example.com/1"
-              />
-              <ThreeDCard
-                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
-                  title="First Card"
-                  description="Description for first card"
-                  tryNowLink="https://example.com/1"
-              />
-              <ThreeDCard
-                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
-                  title="First Card"
-                  description="Description for first card"
-                  tryNowLink="https://example.com/1"
-              />   
-              <ThreeDCard
-                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
-                  title="First Card"
-                  description="Description for first card"
-                  tryNowLink="https://example.com/1"
-              />
-              <ThreeDCard
-                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
-                  title="First Card"
-                  description="Description for first card"
-                  tryNowLink="https://example.com/1"
-              />
-              <ThreeDCard
-                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
-                  title="First Card"
-                  description="Description for first card"
-                  tryNowLink="https://example.com/1"
-              />
-              <ThreeDCard
-                  imgSrc="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"
-                  title="First Card"
-                  description="Description for first card"
-                  tryNowLink="https://example.com/1"
-              />
-                
-              </ThreeDCardGrid>
-      {/* <ThreeDCardDemo /> */}
+      <ThreeDCardDemo />
+      
       {/* <AnimatedTestimonials  testimonials={testimonials} /> */}
-      <ThreeDServices/>
       <WobbleCardDemo/>
 
       {/* Footer Section */}

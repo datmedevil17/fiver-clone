@@ -20,6 +20,7 @@ import Footer from "@/components/Footer";
 import { StickyScrollRevealDemo } from "@/components/StickyScrollRevealDemo";
 import { black } from "tailwindcss/colors";
 import { AppleCardsCarouselDemo } from "@/components/AppleCardsCarousel";
+import { FeaturesSectionDemo } from "@/components/BentoGrid";
 
 
 export default function Home() {
@@ -232,7 +233,8 @@ export default function Home() {
         {/* <BackgroundBoxesDemo/> */}
 
         <HeroScrollDemo/>
-        <StickyScrollRevealDemo/>
+        {/* <StickyScrollRevealDemo/> */}
+        <FeaturesSectionDemo/>
         {/* <HoverEffect items={projects}/> */}
 
         {/* <ExpandableCardDemo/> */}

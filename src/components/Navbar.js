@@ -45,11 +45,11 @@ export function Navbar({ className }) {
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
-        setExpandedMobileItems(null); // Reset expanded items when toggling menu
+        setExpandedMobileItems(null);
     };
 
     const toggleMobileItem = (title) => {
-        console.log('Toggling item:', title); // Add this for debugging
+        console.log('Toggling item:', title);
         setExpandedMobileItems(expandedMobileItems === title ? null : title);
     };
 
@@ -57,7 +57,7 @@ export function Navbar({ className }) {
         {
             title: "Our Company",
             items: [
-                { href: "/web-dev", text: "Web Development" },
+                { href: "/WebDev", text: "Web Development" },
                 { href: "/cyberSec", text: "CyberSecurity" },
                 { href: "/seo", text: "Search Engine Optimization" },
                 { href: "/branding", text: "Branding" },
@@ -143,15 +143,17 @@ export function Navbar({ className }) {
                     )}
                 >
                     <div className={cn(
-                        "  flex items-center",
+                        "flex items-center",
                         isMobileMenuOpen ? "hidden lg:flex" : "flex",
-                        isScrolled ? "lg:hidden" : ""  // Hide on desktop when scrolled
+                        isScrolled ? "lg:hidden" : ""
                     )}>
-                        <img
-                            src="output-onlinepngtools (2).png"
-                            alt="Logo"
-                            className="h-12 w-auto"
-                        />
+                        <Link href="/">
+                            <img
+                                src="output-onlinepngtools (2).png"
+                                alt="Logo"
+                                className="h-12 w-auto cursor-pointer"
+                            />
+                        </Link>
                     </div>
 
                     <motion.div
@@ -172,11 +174,13 @@ export function Navbar({ className }) {
                     >
                         {isScrolled && (
                             <div className="hidden lg:flex items-center mr-8">
-                                <img
-                                    src="output-onlinepngtools (1).png"
-                                    alt="Logo"
-                                    className="h-12 w-auto"
-                                />
+                                <Link href="/">
+                                    <img
+                                        src="output-onlinepngtools (1).png"
+                                        alt="Logo"
+                                        className="h-12 w-auto cursor-pointer"
+                                    />
+                                </Link>
                             </div>
                         )}
 
@@ -228,7 +232,6 @@ export function Navbar({ className }) {
                         )}
                     </motion.div>
 
-                    {/* Mobile Menu Button */}
                     <div className="lg:hidden">
                         <button
                             onClick={toggleMobileMenu}
@@ -248,17 +251,17 @@ export function Navbar({ className }) {
                     </div>
                 </motion.div>
 
-                {/* Mobile Menu */}
                 {isMobileMenuOpen && (
                     <div className="fixed inset-x-0 top-24 px-6 lg:hidden">
                         <div className="bg-black/80 backdrop-blur-sm border border-white/[0.2] rounded-2xl shadow-xl p-4">
-                            {/* Add Logo at the top of mobile menu */}
                             <div className="flex justify-center mb-4 border-b border-white/10 pb-4">
-                                <img 
-                                    src="output-onlinepngtools (2).png"  
-                                    alt="Logo"
-                                    className="h-12 w-auto"
-                                />
+                                <Link href="/">
+                                    <img 
+                                        src="output-onlinepngtools (2).png"  
+                                        alt="Logo"
+                                        className="h-12 w-auto cursor-pointer"
+                                    />
+                                </Link>
                             </div>
                             
                             <nav className="flex flex-col space-y-2">
