@@ -16,7 +16,8 @@ const ThreeDServices = () => {
     {/* Right Section */}
     <div className="flex justify-center items-center p-4">
       <Spline
-        scene="https://prod.spline.design/lnRAvc4GIDpJ9KSH/scene.splinecode"
+        // scene="https://prod.spline.design/aB-TkJ5mWjgOEgg5/scene.splinecode"
+        scene="https://prod.spline.design/aB-TkJ5mWjgOEgg5/scene.splinecode"
         className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl"
       />
     </div>
