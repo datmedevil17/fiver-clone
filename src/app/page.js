@@ -231,12 +231,12 @@ export default function Home() {
         <HeroSection/>
         {/* <GridBackgroundDemo/> */}
         {/* <BackgroundBoxesDemo/> */}
-        
+
         <HeroScrollDemo/>
         {/* <StickyScrollRevealDemo/> */}
         <FeaturesSectionDemo/>
         {/* <HoverEffect items={projects}/> */}
-        
+
         {/* <ExpandableCardDemo/> */}
         {/* <GoogleGeminiEffect/> */}
         {/* <HeroHighlightDemo/> */}
@@ -244,7 +244,7 @@ export default function Home() {
         {/* <div className="w-full">
       <Timeline data={data} />
     </div> */}
-    
+
      {/* <main>
       <Spline
         scene="https://prod.spline.design/RyFUeqpTcG5Kt9qB/scene.splinecode"
