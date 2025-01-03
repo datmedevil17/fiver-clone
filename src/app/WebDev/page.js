@@ -6,6 +6,7 @@ import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import { ThreeDCard, ThreeDCardGrid } from "@/components/3DCardEffect";
 import { WobbleCardDemo } from "@/components/WobbleCard";
 import { Navbar } from "@/components/Navbar";
+import ThreeDimage from "@/components/3DImageGaming";
 
 const projects = [
   {
@@ -169,6 +170,8 @@ const Page = () => {
         />
           
         </ThreeDCardGrid>
+
+        <ThreeDimage />
       {/* 3D Card Section */}
       <ThreeDCardDemo />
       

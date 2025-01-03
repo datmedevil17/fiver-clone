@@ -7,6 +7,7 @@ import { WobbleCardDemo } from "@/components/WobbleCard";
 import ThreeDServices from "@/components/3DElement";
 import { ThreeDCard, ThreeDCardGrid } from "@/components/3DCardEffect";
 import { Navbar } from "@/components/Navbar";
+import ThreeDimage from "@/components/3DImageGaming";
 
 const projects = [
   {
@@ -176,6 +177,7 @@ const Page = () => {
               />
                 
               </ThreeDCardGrid>
+      <ThreeDimage />        
       {/* <ThreeDCardDemo /> */}
       {/* <AnimatedTestimonials  testimonials={testimonials} /> */}
       <ThreeDServices/>
