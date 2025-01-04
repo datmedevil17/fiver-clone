@@ -50,7 +50,7 @@ const HeroSection = () => {
     <div className="flex justify-center items-center p-4">
       <Spline
         scene="https://prod.spline.design/8fcFSxa15zPBmmEZ/scene.splinecode"
-        // scene="https://prod.spline.design/lnRAvc4GIDpJ9KSH/scene.splinecode"
+        // scene="https://prod.spline.design/VW-o4PBRqOD8hzLv/scene.splinecode"
         className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl"
       />
     </div>

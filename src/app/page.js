@@ -21,6 +21,7 @@ import { StickyScrollRevealDemo } from "@/components/StickyScrollRevealDemo";
 import { black } from "tailwindcss/colors";
 import { AppleCardsCarouselDemo } from "@/components/AppleCardsCarousel";
 import { FeaturesSectionDemo } from "@/components/BentoGrid";
+import { Spotlight } from "@/components/ui/spotlight";
 
 
 export default function Home() {
@@ -226,9 +227,14 @@ export default function Home() {
       style={{ backgroundColor: black }} // Lighter shade of black
     >
         <Navbar className="top-2"/>
+        {/* <Spotlight
+                      className="-top-40 left-0 md:left-60 md:-top-20"
+                       fill="white"
+                   /> */}
+        <Spline  scene="https://prod.spline.design/O4yYahnrB0FRliWO/scene.splinecode"  />
 
         {/* <WavyBackgroundDemo className="p-10"/> */}
-        <HeroSection/>
+        {/* <HeroSection/> */}
         {/* <GridBackgroundDemo/> */}
         {/* <BackgroundBoxesDemo/> */}
 
