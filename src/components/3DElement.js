@@ -1,5 +1,6 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline/next';
+import Cube from './3DCube';
 
 
 const ThreeDServices = () => {
@@ -20,6 +21,7 @@ const ThreeDServices = () => {
         scene="https://prod.spline.design/aB-TkJ5mWjgOEgg5/scene.splinecode"
         className="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-xl"
       />
+      {/* <Cube /> */}
     </div>
   </div>
 </div>

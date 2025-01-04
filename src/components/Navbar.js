@@ -57,7 +57,7 @@ export function Navbar({ className }) {
         {
             title: "Our Company",
             items: [
-                { href: "/WebDev", text: "Web Development" },
+                { href: "/webDev", text: "Web Development" },
                 { href: "/cyberSec", text: "CyberSecurity" },
                 { href: "/seo", text: "Search Engine Optimization" },
                 { href: "/branding", text: "Branding" },
