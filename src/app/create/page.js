@@ -374,26 +374,65 @@ const CreateCard = () => {
   const [cards, setCards] = useState([]);
   const [showForm, setShowForm] = useState(true);
   const [previewUrl, setPreviewUrl] = useState('');
+  const [isValidUrl, setIsValidUrl] = useState(false);
 
   useEffect(() => {
     const savedCards = JSON.parse(localStorage.getItem('cards') || '[]');
     setCards(savedCards);
   }, []);
 
+  // Function to validate image URL
+  const validateImageUrl = async (url) => {
+    if (!url) {
+      setIsValidUrl(false);
+      return;
+    }
+
+    try {
+      const img = new Image();
+      img.onload = () => {
+        setIsValidUrl(true);
+        setPreviewUrl(url);
+      };
+      img.onerror = () => {
+        setIsValidUrl(false);
+        setPreviewUrl('');
+      };
+      img.src = url;
+    } catch (error) {
+      setIsValidUrl(false);
+      setPreviewUrl('');
+    }
+  };
+
   // Handle file selection
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
+      if (!file.type.startsWith('image/')) {
+        alert('Please select an image file');
+        e.target.value = '';
+        setPreviewUrl('');
+        return;
+      }
+
       const reader = new FileReader();
       reader.onloadend = () => {
         setPreviewUrl(reader.result);
         setFormData({
           ...formData,
           imageFile: file,
-          imageUrl: reader.result // Store base64 string
+          imageUrl: reader.result
         });
       };
       reader.readAsDataURL(file);
+    } else {
+      setPreviewUrl('');
+      setFormData({
+        ...formData,
+        imageFile: null,
+        imageUrl: ''
+      });
     }
   };
 
@@ -414,8 +453,9 @@ const CreateCard = () => {
       return;
     }
 
-    if (uploadType === 'url' && !formData.imageUrl.trim()) {
-      alert('Image URL is required!');
+    // Validate image based on upload type
+    if (uploadType === 'url' && (!formData.imageUrl.trim() || !isValidUrl)) {
+      alert('Please enter a valid image URL!');
       return;
     }
 
@@ -437,6 +477,14 @@ const CreateCard = () => {
     // Reset form
     setFormData({ text: '', imageUrl: '', imageFile: null });
     setPreviewUrl('');
+    setIsValidUrl(false);
+  };
+
+  // Handle URL input change
+  const handleUrlChange = (e) => {
+    const url = e.target.value;
+    setFormData({ ...formData, imageUrl: url });
+    validateImageUrl(url);
   };
 
   const handleDeleteCard = (cardId) => {
@@ -447,8 +495,9 @@ const CreateCard = () => {
     }
   };
 
-  // Login form JSX remains the same
+  // Rest of the component remains the same, but we'll update the form part
   if (!isAuthenticated) {
+    // ... Login form JSX remains the same ...
     return (
       <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md mx-auto bg-white rounded-lg shadow-md p-6">
@@ -553,6 +602,7 @@ const CreateCard = () => {
                     setUploadType(e.target.value);
                     setFormData({ ...formData, imageUrl: '', imageFile: null });
                     setPreviewUrl('');
+                    setIsValidUrl(false);
                   }}
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 >
@@ -572,7 +622,7 @@ const CreateCard = () => {
                     required
                     className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                     value={formData.imageUrl}
-                    onChange={(e) => setFormData({ ...formData, imageUrl: e.target.value })}
+                    onChange={handleUrlChange}
                   />
                 </div>
               ) : (
@@ -583,6 +633,7 @@ const CreateCard = () => {
                   <input
                     type="file"
                     id="imageFile"
+                    required
                     accept="image/*"
                     onChange={handleFileChange}
                     className="mt-1 block w-full text-sm text-gray-500
@@ -595,17 +646,18 @@ const CreateCard = () => {
                 </div>
               )}
 
-              {(previewUrl || formData.imageUrl) && (
+              {previewUrl && (
                 <div className="mt-4">
                   <p className="block text-sm font-medium text-gray-700 mb-2">Preview:</p>
                   <img
-                    src={previewUrl || formData.imageUrl}
+                    src={previewUrl}
                     alt="Preview"
                     className="w-full h-48 object-cover rounded-md"
                     onError={() => {
                       setPreviewUrl('');
                       if (uploadType === 'url') {
                         setFormData({ ...formData, imageUrl: '' });
+                        setIsValidUrl(false);
                       }
                     }}
                   />
@@ -621,6 +673,7 @@ const CreateCard = () => {
             </form>
           </div>
         ) : (
+          // Gallery view remains the same
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto">
             {cards.map((card) => (
               <div 
