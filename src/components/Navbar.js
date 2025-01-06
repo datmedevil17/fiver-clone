@@ -59,7 +59,7 @@ export function Navbar({ className }) {
             items: [
                 { href: "/webDev", text: "Web Development" },
                 { href: "/cyberSec", text: "CyberSecurity" },
-                { href: "/seo", text: "Search Engine Optimization" },
+                { href: "/gaming", text: "Game" },
                 { href: "/branding", text: "Branding" },
             ]
         },
