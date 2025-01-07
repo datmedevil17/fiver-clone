@@ -231,10 +231,10 @@ export default function Home() {
                       className="-top-40 left-0 md:left-60 md:-top-20"
                        fill="white"
                    /> */}
-        <Spline  scene="https://prod.spline.design/O4yYahnrB0FRliWO/scene.splinecode"  />
+        {/* <Spline  scene="https://prod.spline.design/O4yYahnrB0FRliWO/scene.splinecode"  /> */}
 
         {/* <WavyBackgroundDemo className="p-10"/> */}
-        {/* <HeroSection/> */}
+        <HeroSection/>
         {/* <GridBackgroundDemo/> */}
         {/* <BackgroundBoxesDemo/> */}
 
