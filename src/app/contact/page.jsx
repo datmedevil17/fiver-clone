@@ -56,11 +56,18 @@ const ContactForm = () => {
 
     try {
       setIsSubmitting(true);
+
+      console.log('Sending form data:', formData);
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+
+      console.log('Response status:', response.status);
+
+    const responseData = await response.json();
+    console.log('Response data:', responseData);
 
       if (response.ok) {
         setStatus({

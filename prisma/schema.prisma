@@ -14,9 +14,12 @@ datasource db {
 }
 
 model ContactSubmission {
-  id          String   @id @default(cuid())
+  id          Int      @id @default(autoincrement())
   email       String
   phone       String
   description String
-  submittedAt DateTime @default(now())
+  submittedAt DateTime
 }
+
+
+
