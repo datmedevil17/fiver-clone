@@ -22,6 +22,7 @@ import { black } from "tailwindcss/colors";
 import { AppleCardsCarouselDemo } from "@/components/AppleCardsCarousel";
 import { FeaturesSectionDemo } from "@/components/BentoGrid";
 import { Spotlight } from "@/components/ui/spotlight";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 
 
 export default function Home() {
@@ -220,12 +221,14 @@ export default function Home() {
       ];
 
   return (
-
+    
 
     <div
       className="min-h-screen"
       style={{ backgroundColor: black }} // Lighter shade of black
     >
+      <TracingBeam>
+      
         <Navbar className="top-2"/>
         {/* <Spotlight
                       className="-top-40 left-0 md:left-60 md:-top-20"
@@ -260,6 +263,8 @@ export default function Home() {
     <AppleCardsCarouselDemo/>
     {/* <VortexDemo/> */}
     <Footer />
+    </TracingBeam>
     </div>
+    
   );
 }
