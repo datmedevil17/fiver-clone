@@ -227,7 +227,7 @@ export default function Home() {
       className="min-h-screen"
       style={{ backgroundColor: black }} // Lighter shade of black
     >
-      <TracingBeam>
+      {/* <TracingBeam> */}
       
         <Navbar className="top-2"/>
         {/* <Spotlight
@@ -263,7 +263,7 @@ export default function Home() {
     <AppleCardsCarouselDemo/>
     {/* <VortexDemo/> */}
     <Footer />
-    </TracingBeam>
+    {/* </TracingBeam> */}
     </div>
     
   );
