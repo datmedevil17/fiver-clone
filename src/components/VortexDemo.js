@@ -18,7 +18,7 @@ export function VortexDemo() {
           text: "with ",
         },
         {
-          text: "Aceternity.",
+          text: "Elixir.",
           className: "text-blue-500 dark:text-blue-500",
         },
       ];
@@ -34,12 +34,18 @@ export function VortexDemo() {
       </p>
       <TypewriterEffectSmooth words={words} />
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
-        <button className="w-40 h-10 rounded-xl bg-black border border-white text-white text-sm">
+        {/* <button className="w-40 h-10 rounded-xl bg-black border border-white text-white text-sm">
           Join now
-        </button>
-        <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
+        </button> */}
+        <a 
+        href="/contact" 
+        className="w-40 h-10 rounded-xl bg-black border border-white text-white text-sm flex justify-center items-center hover:bg-white hover:text-black"
+        >
+          Contact Us
+        </a>
+        {/* <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
           Signup
-        </button>
+        </button> */}
       </div>
     </div>
 
