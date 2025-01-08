@@ -494,7 +494,7 @@ return (
                 <h4 class="text-5xl font-bold text-purple-600 glow-animation">Elixir</h4>
                 </p>
                 <div className="flex flex-col space-y-2">
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 pt-4">
                     <li className="text-gray-300 text-md font-semibold hover:text-blue-600 cursor-pointer">
                       <a href="">Who We Are</a>
                     </li>
