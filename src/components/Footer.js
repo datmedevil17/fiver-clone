@@ -101,108 +101,6 @@ function Footer() {
     },
 ]
 
-//  const iconSlugs = [
-//   // Frontend
-//   "typescript",
-//   "javascript",
-//   "react",
-//   "vuejs",
-//   "angular",
-//   "svelte",
-//   "html5",
-//   "css3",
-//   "sass",
-//   "less",
-//   "styled-components",
-//   "tailwindcss",
-//   "framermotion",
-//   "threejs",
-//   "figma",
-//   "sketch",
-//   "adobexd",
-
-//   // Backend
-//   "nodejs",
-//   "express",
-//   "nestjs",
-//   "python",
-//   "django",
-//   "flask",
-//   "java",
-//   "spring",
-//   "php",
-//   "laravel",
-//   "ruby",
-//   "rails",
-//   "go",
-//   "golang",
-//   "rust",
-//   "dotnet",
-//   "csharp",
-//   "aws",
-//   "azure",
-//   "gcp",
-//   "docker",
-//   "kubernetes",
-
-//   // Databases
-//   "postgresql",
-//   "mysql",
-//   "mongodb",
-//   "redis",
-//   "elasticsearch",
-//   "graphql",
-
-//   // DevOps
-//   "jenkins",
-//   "gitlab",
-//   "circleci",
-//   "terraform",
-//   "ansible",
-//   "vagrant",
-
-//   // Testing
-//   "jest",
-//   "mocha",
-//   "selenium",
-//   "cypress",
-
-//   // Version Control
-//   "git",
-//   "github",
-//   "gitlab",
-//   "bitbucket",
-
-//   // Other
-//   "webpack",
-//   "babel",
-//   "eslint",
-//   "prettier",
-//   "npm",
-//   "yarn",
-//   "pwa",
-//   "graphql",
-//   "rest",
-//   "ai",
-//   "machinelearning",
-//   "datascience",
-//   "cybersecurity",
-//   "blockchain",
-//   "ethereum",
-//   "solidity",
-//   "hardhat",
-//   "wagmi",
-//   "foundry",
-//   "move",
-//   "aptos",
-//   "figma",
-//   "sketch",
-//   "adobexd",
-//   "xd",
-//   "blender",
-//   "photoshop",
-// ];
-
 const iconSlugs = [
   "typescript",
   "javascript",
@@ -275,6 +173,11 @@ return (
                   {/* FooterDock aligned with text */}
                   <div className="-ml-6 pt-8">
                     <FooterDock mobileClassName="translate-y-20"/>
+                  </div>
+                  <div className="-ml-6 pt-8">
+                    <div className="hidden min-[400px]:block max-[800px]:block lg:hidden pt-4">
+                      <IconCloud iconSlugs={iconSlugs}/>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -364,8 +267,8 @@ return (
             </div>
 
 
-          <div className="relative flex size-full max-w-xl items-center justify-center overflow-hidden rounded-lg px-8 min-w-64 sm:pb-0 pb-4">
-            <IconCloud iconSlugs={iconSlugs}/>
+            <div className="relative flex size-full max-w-xl items-center justify-center overflow-hidden rounded-lg px-8 min-w-64 sm:pb-0 pb-4 min-[400px]:hidden max-[800px]:hidden lg:flex">
+              <IconCloud iconSlugs={iconSlugs}/>
             </div>
           </div>
 
