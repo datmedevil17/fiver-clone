@@ -3,7 +3,8 @@ import { BackgroundGradientAnimationDemo } from "@/components/GradientAnimation"
 import React from "react";
 const Page = () => {
     return(
-            <BackgroundGradientAnimationDemo/>
+            // <BackgroundGradientAnimationDemo/>
+            <div></div>
     );
 };
 
